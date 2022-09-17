@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-image: url(./assets/backG.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+body * {
+  font-family: 'inter', sans-serif;
+  line-height: 160%;
+}
+
+header {
+  margin-top: 32px;
+  height: 120px;
+}
+
+header div {
+
+  /*CONFIG LINHA EM VOLTA DA FOTO*/
+  width: 120px;
+  margin: auto;
+  background-image: linear-gradient(90deg, #9572FC 0%,#43e7ad 50.52%, #E2D45C 100%);
+  border-radius: 50%;
+
+  display: flex;
+  padding: 4PX;
+
+  transition: transform .3s;
+
+
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header img{
+  width: 100%;
+  border-radius: 50%;
+
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto; /*PRIMEIRO VALOR CORRESPONDE A PARTE SUPERIOR DOS CARTEZES E SEGUNDO VALOR AOS LADOS*/
+
+  display: grid; /*propriedade que deixa os elementos um em baixo do outro*/
+  gap: 24px;
+
+  margin-top: 32px;
+
+}
+
+section {
+  color: white;
+
+  /*PARA MULTILAS CORES TIPO GRADIENTE USAR DESTA FORMA*/
+  background-image: linear-gradient(90deg, #9572FC 0%,#43e7ad 50.52%, #E2D45C 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+
+}
+
+section div {
+  background-color: #2A2634;
+  padding: 32px;
+  padding-top: 24px;
+
+  /*border-top: 4px solid purple; DEIXA UMA LINHA EM CIMA DA DIV DE FORMA SIMPLES */
+}
+
+section.h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #A1A1AA;
+  border-radius: 8px;
+}
+
+section ul {
+  display: flex;
+  flex-wrap:wrap ;
+  gap: 16px;
+
+  margin-top: 24px;
+
+  
+}
+
+section ul li {
+  transition: transform .3s;
+}
+
+section ul li:hover{
+  transform: scale(1.1);
+}
+
+
+.gameList img{
+  width: 90px;
+  border-radius: 9px;
+}
+
+.channelList img{
+  border-radius: 50%;
+  width: 70px;
+  border: 1px solid #443E54;
+}
+
+/*ANIMAÇÃO*/
+
+/*IRÁ COMEÇAR EM -30PX NO EIXO Y E VOLTAR A POSIÇÃO 0*/
+
+header div {
+  animation: fromTop .3s .2s backwards; /*PROPRIEDADE MAL COMPREENDIDA*/
+}
+
+main section {
+  animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1){
+  animation-delay: .3;
+}
+
+main section:nth-child(2){
+  animation-delay: .4s;
+}
+
+main section:nth-child(3){
+  animation-delay: .7s;
+}
+
+@keyframes fromTop{
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to { 
+    opacity: 1;
+    transform: translateY(0);}
+}
+
+
+@keyframes fromBottom{
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to { 
+    opacity: 1;
+    transform: translateY(0);}
+}
+
+
+
+/*AS PROPRIEDADES TRANSFORM: SCALE FAZ COM QUE O ITEM AO PASSAR O MOUSE SOBRESAIA, UTILIZA EM CONJUNTO COM TRANSITON: TRANSFORM (NUMERO DE SEGUNDOS DA TRANSIÇÃO)*/
