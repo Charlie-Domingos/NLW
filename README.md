@@ -3,4 +3,4 @@
 <h2>Projeto criado através do evento NLW ESPORTS EXPLORER</h2>
 <h3>Preview</h3>
 
-<img src="/NLW_ESPORTS/assets/preview.png">
+<img src="/assets/preview.png">
