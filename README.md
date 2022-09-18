@@ -4,3 +4,5 @@
 <h3>Preview</h3>
 
 <img src="/assets/preview.png">
+
+<p>Neste evento pude aprender mais como funciona a estrutura de uma pagina e novas propriedades em css</p>
