@@ -6,6 +6,6 @@
 
 <h3>Preview</h3>
 
-<img src="/assets/preview.png">
+<img src="/NLW_ESPORTS/assets/preview.png">
 
 
